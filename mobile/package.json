@@ -44,6 +44,7 @@
     "react-native-svg": "15.11.2",
     "react-native-vision-camera": "^4.7.1",
     "react-native-web": "~0.20.0",
+    "react-native-webview": "^13.15.0",
     "sb": "^8.6.12",
     "tailwindcss": "^3.4.17",
     "zod": "^3.24.4"
@@ -51,6 +52,7 @@
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@types/react": "~19.0.14",
+    "@types/react-native": "^0.73.0",
     "babel-loader": "^9.2.1",
     "babel-plugin-module-resolver": "^5.0.2",
     "react-native-svg-transformer": "^1.5.1",
