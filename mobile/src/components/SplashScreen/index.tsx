@@ -1,18 +1,22 @@
+// app/SplashScreen.tsx
+
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 
-// Ajuste o caminho da logo conforme necessário
 const Logo = require('../../assets/icons/logo.png');
 
-export default function SplashScreen({ onStart }: { onStart?: () => void }) {
+export default function SplashScreen() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Bem vindo</Text>
       <Image source={Logo} style={styles.logo} resizeMode="contain" />
       <Text style={styles.title}>libr.AR</Text>
       <Text style={styles.subtitle}>Seu tradutor de libras</Text>
-      <TouchableOpacity style={styles.button} onPress={onStart} activeOpacity={0.8}>
+      <TouchableOpacity style={styles.button} onPress={() => { router.push('/CamPredict'); }} activeOpacity={0.8}>
         <Ionicons name="camera-outline" size={36} color="#BCA6F7" style={{ marginRight: 12 }} />
         <Text style={styles.buttonText}>Start</Text>
       </TouchableOpacity>
