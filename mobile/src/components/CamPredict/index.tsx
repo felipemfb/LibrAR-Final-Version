@@ -20,18 +20,9 @@ export default function CamPredict() {
     );
   }
 
-  const takePicture = async () => {
-    if (!cameraRef.current) return;
-    const photo = await cameraRef.current.takePictureAsync({ base64: true });
-    console.log(photo.uri);
-  };
-
   return (
     <View style={{ flex: 1 }}>
       <CameraView style={{ flex: 1 }} ref={cameraRef} facing="back" />
-      <TouchableOpacity onPress={takePicture} style={styles.button}>
-        <Text style={{ color: '#fff' }}>📷 Tirar foto</Text>
-      </TouchableOpacity>
     </View>
   );
 }
